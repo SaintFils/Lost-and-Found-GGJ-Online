@@ -1,6 +1,8 @@
-﻿namespace ProcessNamespace
+﻿using UnityEngine;
+
+namespace ProcessNamespace
 {
-    public class PlayerInput
+    public class PlayerInput : MonoBehaviour
     {
         
     }
