@@ -5,24 +5,33 @@ namespace ProcessNamespace
 {
     public sealed class GameController : MonoBehaviour
     {
-        private ListExecuteObject _interactiveObject; 
+        private InteractiveObject[] _interactiveObjects;
 
         private void Awake()
         {
-            _interactiveObject = new ListExecuteObject();
+            _interactiveObjects = FindObjectsOfType<InteractiveObject>();
         }
 
         private void Update()
         {
-            for (var i = 0; i < _interactiveObject.Length; i++)
+            for (int i = 0; i < _interactiveObjects.Length; i++)
             {
-                var interactiveObject = _interactiveObject[i];
-
-                if (interactiveObject == null)
+                var interactiveObjects = _interactiveObjects[i];
+                if(interactiveObjects == null) continue;
+                /*if (interactiveObjects is IFlay fly) //что-то с бонусами
                 {
-                    continue;
+                    fly.Fly();
                 }
-                interactiveObject.Execute();
+
+                if (interactiveObjects is IFlicker flicker)
+                {
+                    flicker.Flicker();
+                }
+
+                if (interactiveObjects is IRotation rotation)
+                {
+                    rotation.Rotation();
+                }*/
             }
         }
     }

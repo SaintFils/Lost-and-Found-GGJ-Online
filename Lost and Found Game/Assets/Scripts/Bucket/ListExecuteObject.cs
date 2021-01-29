@@ -4,7 +4,7 @@ using Object = UnityEngine.Object;
 
 namespace ProcessNamespace
 {
-    public sealed class ListExecuteObject : IEnumerator, IEnumerable
+    /*public sealed class ListExecuteObject : IEnumerator, IEnumerable
     {
         private IExecute[] _interactiveObjects;
         private int _index = -1;
@@ -67,5 +67,5 @@ namespace ProcessNamespace
             return GetEnumerator();
         }
 
-    }
+    }*/
 }

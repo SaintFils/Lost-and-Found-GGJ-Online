@@ -10,19 +10,17 @@ namespace ProcessNamespace
 
         /*private void OnTriggerEnter(Collider other)
         {
-            if (!IsInteractable || !other.CompareTag("Player"))
+            if (!IsInteractable || !other.CompareTag(TagManager.PLAYER))
             {
+                Debug.Log("АЙАЙАЙ");
                 return;
             }
             Interaction();
+            Debug.Log("До уничтожения");
             Destroy(gameObject);
+            Debug.Log("После уничтожения");
         }*/
 
-        private void Start()
-        {
-            
-        }
-
-       
+     
     }
 }
