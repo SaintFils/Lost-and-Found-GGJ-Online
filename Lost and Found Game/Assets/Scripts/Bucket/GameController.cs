@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace ProcessNamespace
 {
-    public sealed class GameController : MonoBehaviour
+    /*public sealed class GameController : MonoBehaviour
     {
-        private InteractiveObject[] _interactiveObjects;
+       // private InteractiveObject[] _interactiveObjects;
 
         private void Awake()
         {
-            _interactiveObjects = FindObjectsOfType<InteractiveObject>();
+            //_interactiveObjects = FindObjectsOfType<InteractiveObject>();
         }
 
         private void Update()
@@ -31,8 +31,8 @@ namespace ProcessNamespace
                 if (interactiveObjects is IRotation rotation)
                 {
                     rotation.Rotation();
-                }*/
+                }#1#
             }
         }
-    }
+    }*/
 }

@@ -2,14 +2,14 @@
 
 namespace ProcessNamespace
 {
-    public sealed class GoodBonus : InteractiveObject
+    /*public sealed class GoodBonus 
     {
         [SerializeField] private float _healAmount = 1.0f;
-        protected override void Interaction()
+        /#1#/protected override void Interaction()
         {
             /*gameObject.GetComponent<PlayerBase>().TakeHeal(_healAmount);
-            Debug.Log(nameof(GoodBonus));*/
-        }
+            Debug.Log(nameof(GoodBonus));#2#
+        }#1#
 
         private void Interaction2()
         {
@@ -24,5 +24,5 @@ namespace ProcessNamespace
             Destroy(gameObject);
             Debug.Log("После уничтожения");
         }
-    }
+    }*/
 }
