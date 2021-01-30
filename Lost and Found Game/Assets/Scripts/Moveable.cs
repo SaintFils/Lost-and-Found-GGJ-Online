@@ -53,6 +53,11 @@ namespace ProcessNamespace
             }
         }
 
+        public void Push()
+        {
+            _rigidBody.AddForce(Vector3.up * _jumpForce);
+        }
+
         public void Dash()
         {
             _isDashNow = true;
@@ -80,7 +85,7 @@ namespace ProcessNamespace
         {
             Ray ray = new Ray(_isGroundedRaycastPoint.position, Vector3.down);
             _isGrounded = (Physics.SphereCast(ray, _rayCastRadius, _rayCastDistance, _isGroundedLayersMask)); //пускаем луч, если находим поверхность, принадлежащую нужному слою (например floor) => isgrounded = true
-            Debug.Log(_isGrounded);
+            //Debug.Log(_isGrounded);
         }
     }
 }

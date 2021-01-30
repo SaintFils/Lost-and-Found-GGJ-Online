@@ -1,12 +1,19 @@
-﻿using UnityEngine.SceneManagement;
+﻿using System;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace ProcessNamespace
 {
-    public class Destructable
+    public class Destructable : MonoBehaviour
     {
-        private float _currentHealthPoint;
+        [NonSerialized] public float _currentHealthPoint;
         private float _maxHealthPoint = 3.0f;
         private float _minHealthPoint = 0.0f;
+
+        private void Awake()
+        {
+            _currentHealthPoint = _maxHealthPoint;
+        }
 
         public void ApplyDamage(float damage)
         {
@@ -25,5 +32,14 @@ namespace ProcessNamespace
             }
             _currentHealthPoint += heal;
         }
+        
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.GetComponent<PlayerInput>())
+            {
+                Destroy(gameObject);
+            }
+        }
+
     }
 }
