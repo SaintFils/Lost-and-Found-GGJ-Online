@@ -20,6 +20,7 @@ namespace ProcessNamespace
         [SerializeField] private float _dashTime; //как долго объект будет в состоянии дэша
 
         private float _dashTimer;
+        private float _dashTimerZero = 0.0f;
         private float _lastInput;
         private Rigidbody _rigidBody;
         private bool _isGrounded;
@@ -53,9 +54,9 @@ namespace ProcessNamespace
             }
         }
 
-        public void Push()
+        public void Push(float _pushForce)
         {
-            _rigidBody.AddForce(Vector3.up * _jumpForce);
+            _rigidBody.AddForce(Vector3.up * _pushForce);
         }
 
         public void Dash()
@@ -64,7 +65,7 @@ namespace ProcessNamespace
             _dashTimer = _dashTime; //запускаем таймер, по истечению которого рывок прекратится
         }
 
-        private void Update()
+        private void LateUpdate()
         {
             if (_isDashNow)
             {
@@ -72,7 +73,7 @@ namespace ProcessNamespace
                 _rigidBody.velocity = new Vector3(_lastInput * _dashSpeed, _rigidBody.velocity.y, 0); //двигаем персонажа с увеличенной скоростью без возможности изменить направление
                 _dashTimer -= Time.deltaTime; // тикает таймер рывка
 
-                if(_dashTimer <= 0) //чекаем таймер
+                if(_dashTimer <= _dashTimerZero) //чекаем таймер
                 {
                     _isDashNow = false;
                 }

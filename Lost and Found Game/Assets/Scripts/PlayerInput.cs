@@ -19,6 +19,11 @@ namespace ProcessNamespace
             {
                 _moveable.Jump();
             }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                _moveable.Dash();
+            }
         }
     }
 }

@@ -11,7 +11,7 @@ namespace ProcessNamespace
         private int _lastX;
 
         public Vector2 offset = new Vector2(2f, 1f);
-        void Start ()
+        private void Start ()
         {
             offset = new Vector2(Mathf.Abs(offset.x), offset.y);
             FindPlayer(faceLeft);
@@ -31,7 +31,7 @@ namespace ProcessNamespace
             }
         }
 
-        void Update () 
+        private void LateUpdate () 
         {
             if(_player)
             {
