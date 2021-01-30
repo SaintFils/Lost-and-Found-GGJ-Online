@@ -31,7 +31,7 @@ namespace ProcessNamespace
 
             Vector3 startPosition = CalculateOffset(transform.position, 0.7f);
             Vector3 directionRaycast = CalculateOffset(_player.position, 0.7f) - startPosition;
-
+           
             var raycast = Physics.Raycast(startPosition, directionRaycast, out hit, directionRaycast.magnitude, _mask);
 
             if (raycast)
