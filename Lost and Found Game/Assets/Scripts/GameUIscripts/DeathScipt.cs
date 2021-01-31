@@ -5,6 +5,11 @@ public class DeathScipt : MonoBehaviour
 {
     [SerializeField]private GameObject DeathBar;
 
+    public void EndLoad()
+    {
+        SceneManager.LoadScene(2);
+    }
+
     public void DeathBtn() 
     {
         DeathBar.SetActive(true);
