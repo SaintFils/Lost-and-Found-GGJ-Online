@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 849968073719104357}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,12 +24,42 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2716072959232310007}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.69, z: 0}
+  m_LocalPosition: {x: 0.503, y: 0.31, z: 0}
   m_LocalScale: {x: 2.0336778, y: 4.281427, z: 2.0336778}
   m_Children: []
   m_Father: {fileID: 7207111502965397908}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6956502556008781712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 148726624555184633}
+  m_Layer: 0
+  m_Name: Left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &148726624555184633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6956502556008781712}
+  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0.00000020861623}
+  m_LocalPosition: {x: -0.491, y: 0.31, z: 0}
+  m_LocalScale: {x: 2.0336778, y: 4.281427, z: 2.0336778}
+  m_Children: []
+  m_Father: {fileID: 7207111502965397908}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!1 &7207111502965397912
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,6 +94,7 @@ Transform:
   m_LocalScale: {x: 0.49172, y: 0.233567, z: 0.49172}
   m_Children:
   - {fileID: 849968073719104357}
+  - {fileID: 148726624555184633}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -174,7 +205,6 @@ MonoBehaviour:
   _jumpForce: 15
   _isGroundedRaycastPoint: {fileID: 7207111502965397908}
   _rayCastDistance: 0.1
-  _rayCastRadius: 0.5
   _isDashNow: 0
   _dashSpeed: 4
   _dashTime: 0
